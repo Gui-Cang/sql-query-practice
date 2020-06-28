@@ -10,3 +10,8 @@
  *
  * 结果应当按照 `orderNumber` 排序。
  */
+  SELECT `orders`.`orderNumber`, SUM(`priceEach`) AS totalPrice, COUNT(`orderdetails`.`orderNumber`) AS detailsCount
+  FROM `orders`, `orderdetails`
+  WHERE `orders`.`orderNumber` = `orderdetails`.`orderNumber`
+  GROUP BY `orderdetails`.`orderNumber`
+  ORDER BY `orders`.`orderNumber`;

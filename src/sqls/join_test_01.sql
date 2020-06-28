@@ -9,3 +9,8 @@
  * firstName 和 lastName 是员工的姓名，city 是办公室所在的城市。结果按照员工的 `employeeNumber`
  * 排序。
  */
+ SELECT `firstName`, `lastName`, `city`
+ FROM `employees`, `offices`
+ WHERE `employees`.`officeCode` = `offices`.`officeCode`
+ ORDER BY `employeeNumber`;
+ 

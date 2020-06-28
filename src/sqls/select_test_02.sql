@@ -5,3 +5,7 @@
  * | employeeNumber  | firstName  | lastName  |
  * +─────────────────+────────────+───────────+
  */
+ SELECT `employeeNumber`, `firstName`, `lastName`
+ FROM `employees`
+ ORDER BY `employeeNumber` DESC
+ LIMIT 0,1

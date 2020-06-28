@@ -9,3 +9,9 @@
  * 
  * 结果应当按照 `orderNumber` 排序。
  */
+   SELECT `orderdetails`.`orderNumber`, `products`.`productName`, `products`.`MSRP`, `orderdetails`.`priceEach`
+   FROM `products`, `orderdetails`
+   WHERE  `products`.`productCode` = `orderdetails`.`productCode` AND `products`.`MSRP` > `orderdetails`.`priceEach`
+   ORDER BY orderdetails.`orderNumber`;
+
+

@@ -8,3 +8,8 @@
  *
  * 查询结果请按照 `customerNumber` 排序。
  */
+   SELECT `customers`.`customerNumber`, COUNT(`orders`.`customerNumber`) AS `totalOrders`
+   FROM `customers`,`orders`
+   WHERE  `customers`.`customerNumber` < 150
+   GROUP BY `orders`.`customerNumber`
+   ORDER BY `customers`.`customerNumber`;

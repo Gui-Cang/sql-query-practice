@@ -5,3 +5,5 @@
  * | count  |
  * +────────+
  */
+SELECT COUNT(DISTINCT country)
+FROM `customers`

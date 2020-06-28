@@ -7,3 +7,7 @@
  *
  * 结果应当按照明细总金额进行排序。
  */
+ SELECT `orderNumber`, SUM(priceEach) AS `subtotal`
+ FROM `orderdetails`
+ GROUP BY `orderNumber`
+ ORDER BY SUM(priceEach)
